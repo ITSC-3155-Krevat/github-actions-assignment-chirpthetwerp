@@ -1,0 +1,27 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+<h1>All CATS!</h1>
+{% if cats|length == 0 %}
+<p>No CATS! Go make a CAT.</p>
+{% else %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>CAT Name</th>
+      <th>CAT Breed</th>
+      <th>CAT Num Legs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for cat in cats %}
+    <tr>
+      <td><a href="/cats/{{ cat.cat_id }}">{{ cat.name }}</a></td>
+      <td>{{ cat.breed }}</td>
+      <td>{{ cat.num_legs }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

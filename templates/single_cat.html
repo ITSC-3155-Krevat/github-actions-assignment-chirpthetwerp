@@ -1,0 +1,10 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+<h1>{{ cat.name }}</h1>
+<form action="/cats/{{ cat.cat_id }}/delete" method="post">
+  <button type="submit" class="btn btn-danger">Delete CAT</button>
+</form>
+<p class="mt-4">Breed: {{ cat.breed }}</p>
+<p>Num Legs: {{ cat.num_legs }}</p>
+{% endblock %}

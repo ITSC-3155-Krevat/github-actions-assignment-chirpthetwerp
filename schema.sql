@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS cats_db;
+
+USE cats_db;
+
+CREATE TABLE IF NOT EXISTS cat (
+	cat_id INT AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    breed VARCHAR(255) NOT NULL,
+    num_legs INT NOT NULL,
+    PRIMARY KEY (cat_id)
+);
